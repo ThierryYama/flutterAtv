@@ -29,39 +29,80 @@ class Home extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(10),
           ),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 15),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  'Thierry Yama',
-                  style: TextStyle(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                    color: fontColor,
+          child: Stack(
+            children: <Widget>[
+              Positioned(
+                right: 10,
+                top: 15,
+                child: ClipOval(
+                  child: SizedBox(
+                    width: 90,
+                    height: 110,
+                    child: Image.asset('images/gato.jpeg', fit: BoxFit.fill),
                   ),
                 ),
-                SizedBox(height: 10),
-                Text(
-                  'Capitao',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: fontColor,
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Gato',
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: fontColor,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Adotado',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: fontColor,
+                      ),
+                    ),
+                    Text(
+                      '7 Anos',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: fontColor,
+                      ),
+                    ),
+                    const SizedBox(height: 25),
+                    Row(
+                      children: <Widget>[
+                        Icon(Icons.phone_callback, color: fontColor),
+                        const SizedBox(width: 5),
+                        Text(
+                          '+55 11 998520 8649',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: fontColor,
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Icon(Icons.email, color: fontColor),
+                        const SizedBox(width: 5),
+                        Text(
+                          'gato@miau.com',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: fontColor,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                Text(
-                  'Ala direita',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: fontColor,
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
